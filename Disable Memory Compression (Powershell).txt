@@ -1,0 +1,8 @@
+    // run in Powershell
+        / disables Memory Compression
+
+Disable-MMAgent -mc
+
+           / see current
+
+Get-MMAgent
