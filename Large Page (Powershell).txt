@@ -1,0 +1,4 @@
+    // run in Powershell
+        / related to Large Pages
+
+secedit /configure /cfg C:\Windows\inf\defltbase.inf /db largepages.sdb /verbose
