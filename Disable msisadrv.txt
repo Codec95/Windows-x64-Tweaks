@@ -1,0 +1,8 @@
+    // disables msisadrv
+        / not recommanded on mobile devices with battery (may not work as intended on all systems)
+
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\msisadrv]
+"Start"=dword:00000004
+"ErrorControl"=dword:00000001
