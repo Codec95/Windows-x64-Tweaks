@@ -1,0 +1,54 @@
+    // Boot Commands to enhance system performance
+        / highly experimental (may not work as intended on all systems)
+
+bcdedit /set useplatformclock no
+bcdedit /deletevalue disabledynamictick
+bcdedit /deletevalue useplatformtick
+bcdedit /set pae ForceEnable
+bcdedit /timeout 0
+bcdedit /set nx AlwaysOff
+bcdedit /set tpmbootentropy ForceDisable
+bcdedit /set pae forceenable
+bcdedit /set x2apicpolicy enable
+bcdedit /set uselegacyapicmode no
+fsutil behavior set DisableLastAccess 1
+bcdedit /set linearaddress57 optout
+bcdedit /set increaseuserva 268435328
+bcdedit /set configaccesspolicy Default
+bcdedit /set extendedinput Yes
+bcdedit /set MSI Default
+bcdedit /set bootmenupolicy Standard 
+bcdedit /set usefirmwarepcisettings No  
+bcdedit /set vsmlaunchtype Off 
+bcdedit /set ems No 
+bcdedit /set forcefipscrypto No
+bcdedit /set noumex Yes
+bcdedit /set bootems No 
+bcdedit /set graphicsmodedisabled No 
+bcdedit /set extendedinput Yes  
+bcdedit /set configflags 0
+bcdedit /set uselegacyapicmode No 
+bcdedit /set halbreakpoint No 
+bcdedit /set forcelegacyplatform No
+bcdedit /set vm No 
+bcdedit /set bootux disabled
+bcdedit /set hypervisorlaunchtype off
+bcdedit /set disableelamdrivers Yes
+bcdedit /set debug No
+bcdedit /set bootdebug No
+bcdedit /set integrityservices disable
+bcdedit /set usephysicaldestination No
+bcdedit /deletevalue restrictapiccluster
+fsutil behavior set encryptpagingfile 0
+fsutil behavior set mftzone 4
+fsutil behavior set disablelastaccess 1
+fsutil behavior set disabledeletenotify 0
+fsutil behavior set memoryusage 2
+bcdedit /deletevalue clustermodeaddressing
+bcdedit /set {globalsettings} custom:16000069 true
+bcdedit /set pciexpress forcedisable
+bcdedit /deletevalue restrictapiccluster
+bcdedit /set isolatedcontext No
+bcdedit /set allowedinmemorysettings 0x0 
+bcdedit /set perfmem 0
+powercfg /setactive SCHEME_MIN
