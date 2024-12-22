@@ -1,0 +1,12 @@
+    // disables Multi Plane Overlay and/or limits Max Planes to 1
+        / just for testing purpose (decreases performance / may fix flickering on some systems)
+
+Windows Registry Editor Version 5.00
+
+  / disable MPO
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Dwm]
+"OverlayTestMode"=dword:00000005
+
+  / limits Max Planes to 1 (check DxDiag output)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers]
+"DisableOverlays"=dword:00000001
