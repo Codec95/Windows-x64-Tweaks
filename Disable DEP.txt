@@ -1,0 +1,6 @@
+    // Disable Data Execution Prevention
+        / may fix heavy Mouse for some (beware: can break various Multiplayer games)
+
+bcdedit /set nx AlwaysOff
+powershell set-ProcessMitigation -System -Disable DEP
+powershell set-ProcessMitigation -System -Disable EmulateAtlThunks
