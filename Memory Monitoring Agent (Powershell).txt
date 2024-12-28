@@ -1,0 +1,21 @@
+    // run commands in Powershell
+        / recommended config only enable Memory Compression + MaxOperationAPIFiles 2048
+
+
+/commands:
+
+get-mmagent (see current config)
+
+disable-mmagent -mc (disable memory compression)(not recommended)  
+  /revert enable-mmagent -mc
+
+disable-mmagent -pc (disable page combining)(recommended)
+  /revert enable-mmagent -pc
+
+disable-mmagent -apl (disable application pre launch)(recommended)
+  /revert enable-mmagent -apl
+
+Set-MMAgent -MaxOperationAPIFiles 2048 (Sets Max Operation API Files to 2048)(recommended)
+  /revert Set-MMAgent -MaxOperationAPIFiles 256
+
+
