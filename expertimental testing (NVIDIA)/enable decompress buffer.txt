@@ -1,0 +1,14 @@
+Windows Registry Editor Version 5.00
+
+  // insight:
+
+     #  RMMapCompBitBackingStore (enables the decompress dev/debug buffer setting when set to 0x00000001)
+
+     #  RMCompbitBackingSize (sets value in mb for decompress buffer (max 256mb, see bitmask) 0x0FFFFFFF) 
+
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}\000X] < replace X with your GPU location
+"RMMapCompBitBackingStore"=dword:00000001
+"RMCompbitBackingSize"=dword:0FFFFFFF
+
+
